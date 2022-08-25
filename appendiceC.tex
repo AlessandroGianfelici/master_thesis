@@ -1,0 +1,43 @@
+\chapter{Threshold functions}
+In this appendix I will define the objects known in the literature as \emph{threshold functions}, which will allow us to express in a more compact and elegant way the flow equations for the relevant observable of the $O(N)$ model, $U_k(\rho)$, $Z_k(\rho)$ and $Y_k(\rho)$.
+
+For our model three different types of threshold functions are defined:
+
+\begin{enumerate}
+ \item $$\L^D_{mn} = -\int_0^\infty dy\widetilde{\partial}_y\left[y^{\frac{D}{2}-1}(g_\perp(y))^m(g_\parallel(y))^n\right]$$
+ \item $${\M^D_{mn}} = -\int_0^\infty dy\widetilde{\partial}_y\left[y^{\frac{D}{2}}(g'_\perp(y))^2) (g_\perp(y))^{m-4}(g_\parallel(y))^n\right]$$
+ \item $$\widetilde \M^D_{mn} = -\int_0^\infty dy \widetilde{\partial}_y\left[y^{\frac{D}{2}}(g'_\parallel(y))^2) (g_\perp(y))^{m}(g_\parallel(y))^{n-4}\right]$$
+ \item $$\N^D_{mn} = \int_0^\infty dy\widetilde{\partial}_y\left[y^{\frac{D}{2}}g'_\perp(y)(g_\perp(y))^{m-2}(g_\parallel(y))^n\right]$$
+ \item $$\widetilde \N^D_{mn} = \int_0^\infty dy\widetilde{\partial}_y\left[y^{\frac{D}{2}}g'_\parallel(y)(g_\parallel(y))^{m-2}(g_\perp(y))^n\right]$$
+ \item $$ Q^{d,\alpha}_{n,m} = \frac{n-2}{2D} M^{D + 2\alpha}_{n+1,m} + \frac{2m}{D} \Big(M^{D + 2\alpha}_{n,m+1}+ N^{D + 2\alpha}_{n,m+1}\Big) - \frac{2\alpha}{D}N^{D + 2\alpha-2}_{n,m}$$
+ \item $$ \widetilde Q^{d,\alpha}_{n,m} = \frac{n-2}{2D}\widetilde  M^{D + 2\alpha}_{n+1,m} + \frac{2m}{D} \Big(\widetilde M^{D + 2\alpha}_{n,m+1}+\widetilde  N^{D + 2\alpha}_{n,m+1}\Big) - \frac{2\alpha}{D}\widetilde N^{D + 2\alpha-2}_{n,m}$$
+ \end{enumerate}
+Where I used the definitions of the longitudinal and trasversal projections of the dimensionless exact propagators, that I recall here:
+$$g_\perp(y) = \frac{1}{u_k'(\widetilde{\rho}) + [z_k(\widetilde{\rho}) + r_k(y)]y}$$
+$$g_\parallel(y) = \frac{1}{u_k'(\widetilde{\rho}) + 2\widetilde{\rho}u_k''(\widetilde{\rho})+ [z_k(\widetilde{\rho}) + \widetilde{\rho}\mathcal{Y}_k(\widetilde{\rho})+ r_k(y)]y}$$
+The derivative $\widetilde{\partial}_y$ is an object, sometimes used in literature (see, for example, \cite{dtilde} or \cite{delamotteintr}) that acts as a ``derivative''
+on the renormalized cutoff function $r_k(y)$, giving the result:
+$$\widetilde{\partial}_y r(y) = -(2y\partial_y + \eta_k)r(y)$$
+and leave invariant the other $y$-dependent observables in the integrand of the threshold functions.
+
+The definitions of the threshold functions, despite its advantages, presents some difficulty when the integrands of these functions has to be explicitly calculated using a numerical routine, due to the definition of $\widetilde{\partial}_y$.
+In order to circumvent it, a wide used trick is to give two different names to $y$, so it will be either called $y$ or $\widetilde{y}$. We then define a function $r(y, \widetilde{y})$ such that:
+\begin{enumerate}
+ \item $$\left. r(y, \widetilde{y})\right|_{\widetilde{y} = y} = r(y)$$ 
+ \item $$\partial_{\widetilde{y}} r(y, \widetilde{y}) = \widetilde{\partial}_y r(y) = -(2y\partial_y + \eta_k)r(y)$$
+ \item $$\partial_y r(y, \widetilde{y}) = \partial_y r(y)$$
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

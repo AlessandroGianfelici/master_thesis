@@ -1,0 +1,277 @@
+
+   %%%%%%%%%%%%%%%%%%%%
+   %                  %
+   %  appendiceD.tex  %
+   %                  %
+   %%%%%%%%%%%%%%%%%%%%
+   
+   
+\chapter{Conventions and formulas for the gravitational coupling}   
+In this appendix I will expose some definition and I will derive some formulas useful in order to fully 
+understand the calculations done in the fifth chapter of this thesis.
+
+\section{York decomposition}
+The York decomposition is an useful way to decompose symmetric traceless two index tensor $\widetilde{h}_{\mu\nu}$:
+\be
+\label{york}
+\widetilde{h}_{\mu\nu}=\tth_{\mu\nu}
++\bnabla_\mu\xi_\nu
++\bnabla_\nu\xi_\mu
++\bnabla_\mu\bnabla_\nu\sigma
+-\frac{1}{d}\bg_{\mu\nu}\bnabla^2\sigma+\frac{h}{d}\bg_{\mu\nu} \\ ,
+\ee
+where $\tth_{\mu\nu}$ is a two index tensor which satisfies:
+\begin{equation}
+ \bnabla^\mu \tth_{\mu\nu} = 0
+\end{equation}
+
+\section{Calculation of $\sqrt{g}$}
+In order to slit the full spacetime metric $g_{\mu\rho}$ in a fixed background $\bg_{\mu\rho}$ and a quantum fluctuation, I have used the 
+following exponential parametrization:
+\begin{equation}
+\label{decomp}
+g_{\mu\nu}=\bg_{\mu\rho}(e^h)^\rho{}_\nu
+\end{equation}
+following what has been done in some recent papers (see, for example, \cite{VACCA52}, \cite{VACCA28} and \cite{VACCA27}).
+The background metric $\bg$ is the one that will be used to raise and lower indices, so we can define:
+$$h_{\mu\nu}=\bg_{\mu\rho}h^\rho{}_\nu$$
+that reveals to be a symmetric tensor.
+
+The full metric is thus expressed ad a power series of the quantum fluctuation tensor $h_{\mu\nu}$, 
+in the following way:
+\bea
+g_{\mu\nu}&=&\bg_{\mu\nu}+h_{\mu\nu}
++\frac{1}{2}h_{\mu\lambda}h^\lambda{}_\nu+\ldots
+\\
+g^{\mu\nu}&=&\bg^{\mu\nu}-h^{\mu\nu}
++\frac{1}{2}h^{\mu\lambda}h_\lambda{}^\nu+\ldots
+\eea
+We note that here both the covariant and the contravariant metrics are nonpolynomial in the quantum 
+fluctuation, in contrast to what happens using the usual linear split:
+$$g_{\mu\nu}=\bg_{\mu\nu}+h_{\mu\nu}$$
+The linear terms are the same as in the linear parametrization,
+some differences appears at the second order of the expansion. 
+
+Another significant difference is that,
+due to the formula: 
+\begin{equation}
+ \det e^h=e^{\tr h}
+\end{equation}
+only the traceless part of $h$
+enters in the definition of the determinant of the full metric, at all orders.
+
+For which it's convenient to split the fluctuation tensor $h_{\mu\nu}$ into a traceless part $\tilh$ and 
+a pure trace part:
+\be
+h^\mu{}_\nu=\tilh^\mu{}_\nu+\frac{h}{d}\delta^\mu_\nu
+\ee
+where I have used the notation $\Tr h \equiv h$.
+%(we use ``$\tau$'' instead of the natural symbol ``$h$'' because the latter is often used for the
+%whole matrix  $h^\mu{}_\nu$).
+Then the determinant of the full metric can be expressed as a power series of the trace of the fluctuation:
+\be
+\sqrt{g}=e^{\frac{h}{2}}\sqrt{\bg}=\sqrt{\bg}\left(1+\frac{h}{2}+\frac{h^2}{8}+\ldots\right)\ .
+\ee
+where I have indicated with $\bar{g}$ the determinant of the background metric.
+
+
+
+\section{Hessian of a scalar $O(N)$ field coupled to gravity}
+In this section I will show explicitly the procedure that leads to the  
+expandsion of the effective average action up to the second order in the fluctuations I used in order to 
+find the Hessian of the model.
+
+I recall the form we have hypothesized for the effective action \eqref{ONaction}:
+\begin{equation}
+\label{ONaction}
+\Gamma_k [\phi, g] = \int {d}^dx\sqrt{g}\left(U(\rho)+\frac{1}{2}\bg^{\mu\nu} \partial_\mu\phi^a \partial_\nu \phi_a-F(\rho)R\right)
+\end{equation}
+First of all I will obtain the expansion of the Ricci scalar $R$.
+For the Christoffel symbols we have:
+\bea\label{g2}
+\hat\G^\a_{\mu\nu}
+&=& \bar \G^\a_{\mu\nu} + \hat\G^{\a (1)}_{\mu\nu} + \hat\G^{\a(2)}_{\mu\nu},
+\eea
+where
+\bea\label{g3}
+\hat\G^{\a (1)}_{\mu\nu} &=& \frac12\left(\bnabla_\nu h^\a{}_\mu
+ +\bnabla_\mu h^\a{}_\nu-\bnabla^\a h_{\mu\nu}\right), \\
+\hat\G^{\a(2)}_{\mu\nu} &=& -\frac12 h^{\a\b} (\bnabla_\nu h_{\mu\b}
++\bnabla_\mu h_{\nu\b}-\bnabla_\b h_{\mu\nu})\\\label{g1}
+&&+\frac{1}{4}\left(\bnabla_\mu(h^{\alpha\lambda}h_{\lambda\nu})
++\bnabla_\nu(h^{\alpha\lambda}h_{\lambda\mu})-\bnabla^\alpha(h_\mu{}^\lambda h_{\lambda\nu})\right)\nonumber
+\eea
+The Ricci curvature tensor is given by:
+\begin{equation}\label{ricci}
+{R^\mu}_{\nu\mu\sigma} =
+\partial_{\mu}{\Gamma^\mu_{\sigma\nu}} - \partial_{\sigma}\Gamma^\mu_{\mu\nu} 
++ \Gamma^\mu_{\mu\lambda} \Gamma^\lambda_{\sigma\nu}
+- \Gamma^\mu_{\sigma\lambda}\Gamma^\lambda_{\mu\nu}
+\end{equation}
+so, substituting the equations \eqref{g1},\eqref{g3} and \eqref{g2} into \eqref{ricci}, the expression of the Ricci tensor at the second order in $h_{\mu\nu}$ reads:
+\be
+\hR_{\nu\sigma}=\hR_{\mu\nu}{}^\mu{}_\sigma = 
+\bR_{\mu\nu}{}^\mu{}_\sigma 
++ \hR^{(1)}_{\mu\nu}{}^\mu{}_\sigma
++ \hR^{(2)}_{\mu\nu}{}^\mu{}_\sigma, 
+\ee
+where
+\begin{equation}
+ \hR^{(1)}_{\mu\nu}{}^\mu{}_\sigma = \bnabla_\mu\hat\G^{(1)\mu}_{\nu\sigma}-\bnabla_\nu\hat\G^{(1)\mu}_{\mu\sigma}
+\end{equation}
+
+\begin{equation}
+ \hR^{(2)}_{\mu\nu}{}^\mu{}_\sigma = \bnabla_\mu\hat\G^{(2)\mu}_{\nu\sigma}-\bnabla_\nu\hat\G^{(2)\mu}_{\mu\sigma}+[\hat\G^{(1)}_\mu,\hat\G^{(1)}_\nu]^\mu{}_\sigma\ .
+\end{equation}
+
+Finally one can combine the expansion of $\sqrt{g}$ with that of $R$
+and integrate over spacetime.
+
+We can then rewrite, up to an inifluent total derivative term, the second order terms in the expansion of the Hilbert action in the following way:
+\bea
+\int d^Dx\sqrt{\bg}\Bigl[&&\!\!\!\!\!\!
+\frac{1}{4}h_{\mu\nu}\bnabla^2 h^{\mu\nu}
+-\frac{1}{2}h_{\mu\nu}\bnabla^\mu\bnabla^\rho h_\rho{}^\nu
++\frac{1}{2} h\bnabla_\mu\bnabla_\nu h^{\mu\nu}
+-\frac{1}{4} h\bnabla^2 h+
+\nonumber\\
+&&
++\frac{1}{2}\bR_{\mu\rho\nu\sigma}h^{\mu\nu}h^{\rho\sigma}
+-\frac{1}{2}\bR_{\mu\nu}h^{\mu\nu}h
++\frac{1}{8}\bR h^2\Bigr]
+\eea
+Now, using the York decomposition on the metric and using the following relations, which hold on the sphere $S^d$:
+\bea
+\int dx \sqrt{\bg}\, h_{\mu\nu}\bnabla^2 h^{\mu\nu} &=& \int dx \sqrt{\bg} \Big[
+\tth_{\mu\nu} \bnabla^2 \tth^{\mu\nu} 
+-2\xi_\mu\left(\bnabla^2+\frac{\bR}{d}\right)\left(\bnabla^2+\frac{D+1}{D(D-1)}\bR\right)\xi^\mu+
+\nonumber\\
+&& 
++\frac{D-1}{D}\sigma\bnabla^2\left(\bnabla^2+\frac{2\bR}{D-1}\right)
+\left(\bnabla^2+\frac{\bR}{D-1}\right)\sigma 
++ \frac{1}{D} h\bnabla^2h\Big]\ ,
+\nonumber\\
+%
+\int dx \sqrt{\bg}\,h_{\mu\nu} \nabla^\mu\nabla_\rho h^{\rho\nu} &=& 
+\int dx \sqrt{\bg}\Big[-\xi_\mu\left(\bnabla^2+\frac{\bR}{D}\right)^2\xi^\mu 
++\frac{(D-1)^2}{D^2}\sigma \bnabla^2\left(\bnabla^2+\frac{\bR}{D-1}\right)^2\sigma+
+\nonumber\\
+&& +\frac{2(D-1)}{D^2} h \bnabla^2\left(\bnabla^2+\frac{\bR}{D-1}\right)\sigma 
++\frac{1}{D^2} ( h)\bnabla^2 h\Big]\ ,
+\nonumber\\
+%\int dx \sqrt{\bg} h \nabla^\mu\nabla^\mu h_{\mu\nu} &=& \int dx \sqrt{\bg} \left[ \frac23 h \bnabla^2 \left(\bnabla^2 + \frac{R}{2}\right) \sigma +\frac13 h\bnabla^2 h \right]\ ,
+%\nonumber\\
+\int dx \sqrt{\bg}\,h_{\mu\nu} h^{\mu\nu} &=& 
+\int dx \sqrt{\bg}
+\Big[\tth_{\mu\nu}\tth^{\mu\nu} 
++2\xi_\mu \left(-\bnabla^2-\frac{\bR}{D}\right) \xi^\mu +
+\nonumber\\
+&& +\frac{D-1}{D}\sigma\bnabla^2\left(\bnabla^2+\frac{\bR}{D-1}\right)\sigma  
++\frac{1}{D}h^2\Big]\ .
+\label{hterms}
+\eea
+
+Collecting all terms we can rewrite the quadratic effective action in terms
+of the independent fields $\tth$, $\xi$, $\sigma$, $h$ and $\delta\phi$:
+\bea
+&&\int dx\sqrt{\bg}\Biggl[
+F(\bphi)\Biggl(
+\frac{1}{4}\tth_{\mu\nu}\left(-\bnabla^2+\frac{2\bR}{D(D-1)}\right)\tth^{\mu\nu}
+-\frac{(D-1)(D-2)}{4D^2}\sigma'\left(-\bnabla^2\right)\sigma'
+\nonumber\\
+&&
+-\frac{(D-1)(D-2)}{2D^2}h \sqrt{(-\bnabla^2)\left(-\bnabla^2-\frac{\bR}{D-1}\right)}\sigma'
+-(D-1)(D-2) \frac{h}{2D} \left(-\bnabla^2+\frac{(D-2)\bR}{2(D-1)}\right)\frac{h}{2D}\Biggr)
+\nonumber\\
+&&
+-F'(\bphi)\frac{D-1}{D} \delta\phi \left(
+\sqrt{(-\bnabla^2)\left(-\bnabla^2-\frac{\bR}{D-1}\right)}\sigma'
++2D\left(-\bnabla^2+\frac{(D-2)\bR}{2(D-1)}\right)\frac{h}{2D}
+\right)
+\nonumber\\
+&&
++\frac{1}{2} \delta\phi (-\bnabla^2+V''(\bphi)-F''(\bphi)\bR)\delta\phi
++\frac{1}{2}V'(\bphi)h \delta\phi
++\frac{1}{8}V(\bphi)h\Biggr]
+\eea
+We note that the kinetic operator of the $h$ field is the
+conformal scalar operator.
+
+
+\section{Transformation properties}
+In this section I will discute the behavior of the metric under gauge transformation.
+Under an infinitesimal diffeomorphism $\epsilon$, the metric transformation is given by the Lie derivative:
+\be
+\label{transfg}
+\delta_\epsilon g_{\mu\nu}=
+\Lie_\epsilon g_{\mu\nu}
+\equiv
+\epsilon^\rho\partial_\rho g_{\mu\nu}
++g_{\mu\rho}\partial_\nu\epsilon^\rho
++g_{\nu\rho}\partial_\mu\epsilon^\rho\ .
+\ee
+Now we have to define the transformations of $\bg$ and $h$ in such a way that the full metric
+defined in \eqref{decomp} transforms according to \eqref{transfg}.
+The simplest one is the background transformation.
+If we treat $\bg$ and $h$ as tensors under $\delta_\epsilon$:
+\be
+\delta^{(B)}_\epsilon\bg_{\mu\nu}=\Lie_\epsilon \bg_{\mu\nu}\ ;
+\qquad
+\delta^{(B)}_\epsilon h^\mu{}_\nu=\Lie_\epsilon h^\mu{}_\nu\ .
+\ee
+then we have also:
+\be
+\delta^{(B)}_\epsilon(e^h)^\mu{}_\nu=\Lie_\epsilon(e^h)^\mu{}_\nu
+\ee
+and \eqref{transfg} follows.
+
+The ``quantum'' gauge transformation of $h$ is defined so as to reproduce
+\eqref{transfg}
+when the background metric $\bg$ is fixed:
+\be
+\delta^{(Q)}_\epsilon \bg_{\mu\nu}=0\ ;
+\qquad
+\bg_{\mu\rho}\delta^{(Q)}_\epsilon (e^h)^\rho{}_\nu
+=\Lie_\epsilon g_{\mu\nu}\ .
+\ee
+From the properties of the Lie derivative we obtain:
+\be
+\Lie_\epsilon g_{\mu\nu}=\Lie_\epsilon \bg_{\mu\rho} (e^h)^\rho{}_\nu
++\bg_{\mu\rho}\Lie_\epsilon(e^h)^\rho{}_\nu
+=(\bnabla_\rho\epsilon_\mu+\bnabla_\mu\epsilon_\rho) (e^h)^\rho{}_\nu
++g_{\mu\lambda}(e^{-h})^\lambda{}_\rho\Lie_\epsilon(e^h)^\rho{}_\nu
+\ee
+and we find:
+\be
+(e^{-h}\delta^{(Q)}_\epsilon e^h)^\mu{}_\nu=
+(e^{-h}\Lie_\epsilon e^h)^\mu{}_\nu
++(e^{-h})^\mu{}_\rho(\bnabla^\rho\epsilon_\sigma+\bnabla_\sigma\epsilon^\rho)
+(e^h)^\sigma{}_\nu
+\ee
+Expanding the latter expression for small values of the quantum fluctuation $h$ the result we obtain is:
+\be
+\delta^{(Q)}_\epsilon h^\mu{}_\nu=
+\bnabla^\mu\epsilon_\nu+\bnabla_\nu\epsilon^\mu
++\Lie_\epsilon h^\mu{}_\nu
++[\Lie_\epsilon\bar g,h]^\mu{}_\nu
++O(\epsilon h^2)\ .
+\ee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

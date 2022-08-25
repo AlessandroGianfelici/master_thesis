@@ -1,0 +1,62 @@
+     %%%%%%%%%%%%%%%%%%%%
+     %                  %
+     %  conclusioni.tex %
+     %                  %
+     %%%%%%%%%%%%%%%%%%%%
+\chapter*{Conclusion}
+\noindent
+
+In this thesis I have studied the nonperturbative renormalization group techniques applied to the physics of a scalar linear sigma model,
+a quantum field theory whith an internal $O(N)$ symmetry. 
+I have considered both the case of a QFT defined on an D dimensional Euclidean flat spacetime and, in three dimensions,
+the case of a general non minimal coupling to a gravitational field, which has been treated as a QFT within 
+the paradigm of the asymptotic safety.
+
+In the flat spacetime case I have studied the model using an effective average action truncated at the second order in the derivative expansion and I have analytically  derived the flow equation for the relevant quantities 
+of the model. Then the special case of $N\to \infty$ has been investigated in order to obtain simplified equations which can be used to investigate the fixed point structure of the model. We distinguish three different cases: 
+\begin{enumerate}
+ \item Wavefunction renormalization identically constant and vanishing anomalous dimension
+ \item Non constant wavefunction renormalization and vanishing anomalous dimension
+ \item Non constant wavefunction renormalization and nonvanishing anomalous dimension
+\end{enumerate}
+The first case has already been studied in the literature, while the other two are investigated for the first time. 
+In the case of a vanishing anomalous dimension I was able to give evidence to the conjecture of Morris and Turner \cite{morristurner}, while the study of the most
+general case revealed numerically too hard to solve so I had let it for future works, having discussed some of the analytical/numerical tools which should be used to attack and solve the problem in general.
+
+Regarding the case of the scale $O(N)$ model in integration with the gravitational field, I have considered a theory defined on a $3$ dimensional space in which the gravity is treated as a QFT in the 
+paradigm of the asymptotic safety. Within a specific formulation of the background field theory of gravity, gauge fixing choice as well as a particular coarse-graining scheme of renormalization, 
+previously used in the literature, the flow equations for the effective average action, and in particular for the two ``potentials'' is the LPA truncation, have bee derived.
+I stress that with this approach one is able to study the RG flow of a theory with an infinite number of couplings, since an infinite number of them is necessary to descrive the functions $u(\rho)$ 
+and $f(\rho)$ in any base of the functional space, where $\rho=\phi^a \phi^a/2$.
+Then I looked for the fixed point to the model, deriving analytically two of them as a function of the parameter $N$.
+One of this fixed point action is an Einstein-Hilbert action with a cosmological constant and a ``free'' scalar theory, in the sense that it interacts with gravity only through the kinetic term,
+but as soon as one deviates from the fixed point the RG flow towards the IR generates in the effective average action several operators. Essentially they correspond, close to the fixed point, to the ones associated to the relevant directions.
+The second scaling solution corresponds to a scalar $O(N)$ model with also a non minimal coupling to gravity with the operator of the form $\xi \rho R$. 
+Considerations similar to the previous case, when a bare action is located close to the fixed point and one studies the flow towards the IR, can be made.
+
+Then  I have written a numerical routine in order to find other non trivial fixed point. It is based on a shooting method, that needs as input two  parameters $\sigma_1$ and $\sigma_2$, that represents the initial values for the first derivatives 
+of $u(\rho)$ and $f(\rho)$, while $u(\rho)$ and $f(\rho)$ are found imposing the fixed point equations to be satisfied.
+
+Then the function $\rho(\sigma_1, \sigma_2)$ has been plotted, looking for its peak,
+corresponding to physically acceptable global solutions.
+
+The values of $\sigma_1$ and $\sigma_2$ have then been found for $N=1$, $N=3/2$ and $N=2$:
+\begin{enumerate}
+ \item $N=1$, $(\sigma_1, \sigma_2) \simeq (-0.0585, 0.344)$;
+ \item $N=3/2$, $(\sigma_1, \sigma_2) \simeq (-0.0425, 0.385)$;
+ \item $N=2$, $(\sigma_1, \sigma_2) \simeq (-0.0029, 0.5260)$;
+\end{enumerate}
+The full construction of the global solution is up to now not very accurate, having being match only to local polynomial expansions but to asymtptotic expansions of global numerical solutions covering the asymptotic region.
+Moreover pseudo spectral method, discussed in section 4 could reveal themselves to be the best approach to solve globally such a kind of problems. 
+
+These solutions, having the first derivative of the potential in the origin $u'(0)<0$, are in a broken phase.
+They can be considered as a deformation of the Wilson-Fisher fixed point which in flat space are, for example, for $N=1$, associated to the Ising universality class, which is induced by the dynamical gravitational interaction.
+Such a non trivial solution is not expected to survive in $D=4$ as it is already the case for a flat space-time.
+Similar results are being currently obtained in different number of dimensions and in particular in $D=4$ and may have interesting cosmological implications.
+
+I have provided some first results for the scaling solutions, which should be completed by analysing the general dependence in $N$, 
+including that in the large N limit which can be probably carried on analytically. Moreover the spectral analysis for the eigenperturbations of the 
+linearized equations around the fixed points is necessary to understand the dimension of the UV critical surface and the set of operators which are relevant. 
+This latter task requires in general a numerical approach. Of curse finally one should also study the full global flow from the UV to the IR.
+
+These results can be extended in several directions, and the approach should be repeated with other coarse-graining schemes to verify the robustness against it.

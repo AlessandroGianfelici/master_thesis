@@ -1,0 +1,557 @@
+\chapter{Proper Vertices}
+\noindent
+In this appendix, I will derive the functional derivatives of $\Gamma_k(\phi)$ respect to the field $\phi_i$ up to the fourth order.
+For the sake of convenience, I will work with the integrand of the effective action $\gamma(\phi)$, rather than with the effective action itself. 
+I will use the following notations:
+$$\Gamma_k(\phi) = \int \gamma_k(\phi) d^Dx = \int [ U_k(\rho) + \gamma^Z_k(\phi) +\gamma^Y_k(\phi) ] d^Dx = \int \gamma_k(\phi) d^Dx = \int U_k(\rho) d^Dx  + \Gamma^Z_k(\phi) +\Gamma^Y_k(\phi) $$
+where:
+\begin{itemize}
+ \item $\gamma^Z_k(\phi) = \frac{1}{2}Z_k(\rho) \partial^\mu \phi_i \partial_\mu \phi^i$
+ \item $\gamma_k^{Y} = \frac{1}{4} Y_k(\rho) \partial^\mu \rho \partial_\mu \rho =  \frac{1}{4} Y_k(\rho) \phi_i\partial^\mu \phi^i \phi_j\partial_\mu \phi^j$
+\end{itemize}
+In this thesis I have considered small fluctuation of the fields around a constant backgroung configuration so, at the end of the computation, the value of every observable 
+will be calculated for constant fields.
+\begin{equation*}
+ \phi^i(x) = \bar{\phi}^i + \delta\phi^i(x)
+\end{equation*}
+and, analogously, in momentum space we have:
+\begin{equation*}
+ \phi^i(p) = \bar{\phi}^i + \delta\phi^i(p)
+\end{equation*}
+So the effective average action in momentum space can be expressed as a series expansion of power of $\delta\phi_i$, the coefficients being the proper vertices:
+\begin{equation*}
+ \Gamma_k(\phi) = \Gamma_k(\bar{\phi}) + \left.\frac{\delta\Gamma_k(\phi)}{\delta\phi_i(p_1)}\right|_{\bar{\phi}}\delta\phi^i(p_1) + \left.\frac{\delta^2\Gamma_k(\phi)}{\delta\phi_i(p_1)\delta\phi_j(p_2)}\right|_{\bar{\phi}}\delta\phi^i(p_1)\delta\phi^j(p_2) +
+\end{equation*}
+\begin{equation*}
+ + \left.\frac{\delta^3\Gamma_k(\phi)}{\delta\phi_i(p_1)\delta\phi_j(p_2)\delta\phi_k(p_3)}\right|_{\bar{\phi}}\delta\phi^i(p_1)\delta\phi^j(p_2)\delta\phi^k(p_3) + \left.\frac{\delta^3\Gamma_k(\phi)}{\delta\phi_i(p_1)\delta\phi_j(p_2)\delta\phi_k(p_3)\delta\phi_l(p_4)}\right|_{\bar{\phi}}\delta\phi^i(p_1)\delta\phi^j(p_2)\delta\phi^k(p_3)\delta\phi^l(p_4)
+\end{equation*}
+
+In order to obtain the expressions of $\Gamma_k^{(n)}$  in momentum space, I need to calculate the Fourier transformation of the related direct-space expression.
+I will define four tetramomentum vectors $p_1$, $p_2$, $p_3$ and $p_4$, so the proper vertex in momentum space will be defined by the expressions:
+\begin{enumerate}
+ \item $$\widetilde{\Gamma}^{(2)}_k(p_1, p_2) = \int  d^Dx \int d^Dy_1\int d^Dy_2 \left[\frac{\delta^2 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)} + \frac{\delta^2 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)} +\frac{\delta^2 \gamma_k^{Y}}{\delta \phi_a(y_1)\delta \phi_b(y_2)} \right]\e^{-ip_1y_1}\e^{-ip_2y_2}$$
+ \item $$\widetilde{\Gamma}^{(3)}_k(p_1, p_2, p_3) =  \int  d^Dx \int d^Dy_1\int d^Dy_2 \int d^Dy_3 \Bigg[\frac{\delta^3 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)} + $$  \\ \\ 
+       $$ + \frac{\delta^3 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)} +\frac{\delta^3 \gamma_k^{Y}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\phi_c(y_3)} \Bigg]\e^{-ip_1y_1}\e^{-ip_2y_2}\e^{-ip_3y_3}$$
+ \item $$\widetilde{\Gamma}^{(4)}_k(p_1, p_2, p_3, p_4) = $$ \\ \\ $$ = \int  d^Dx \int d^Dy_1 \int d^Dy_2 \int d^Dy_3\int d^Dy_4 \Big[\frac{\delta^4 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)\phi_d(y_4)} + $$\\ $$ +\frac{\delta^4 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)\phi_d(y_4)}+\frac{\delta^4 \gamma_k^{Y}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\phi_c(y_3)\phi_d(y_4)} \Bigg]\e^{-ip_1y_1}\e^{-ip_2y_2}\e^{-ip_1y_3}\e^{-ip_4y_4}$$
+\end{enumerate}
+In order to obtain the Fourier transforms it's necessary to consider the integral representation of the Dirac distribution:
+\begin{equation*}
+ \delta(x) = \frac{1}{(2\pi)^D}\int \e^{ikx}d^Dx
+\end{equation*}
+In the following calculations I will use the notations:
+\begin{enumerate}
+ \item $\mathcal{O}^{(n)}$, with $n$ arabic numeral $ \longrightarrow$  $n^{th}$ functional derivative with respect to the field $\phi$.
+ \item $\mathcal{O}^{N}$, with $N$ roman numeral $ \longrightarrow$  $N^{th}$ functional derivative with respect to $\rho = \frac{1}{2}\phi^i\phi_i$
+\end{enumerate}
+
+\section{Derivatives of the potential $U_k(\rho)$}
+\subsection{I order derivative}
+\subsubsection{I order derivative in direct space}
+\begin{equation}
+ \frac{\delta U_k(\rho)}{\delta \phi_a(y_1)} = U'_k(\rho)\phi^a\delta(x - y_1)
+\end{equation}
+\subsubsection{I order derivative in momentum space}
+\begin{equation}\label{U1}
+ \int  \frac{d^Dp_1}{(2\pi)^D} U_k^{(1)}(\rho, p_1) = U'_k(\rho)\phi^a\delta(p_1)
+\end{equation}
+\subsection{II order derivative}
+\subsubsection{II order derivative in direct space}
+\begin{equation}
+ \frac{\delta^2 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)} = U'_k(\rho)\delta^{ab}\delta(x - y_1)\delta(y_1 - y_2) + U''_k(\rho)\delta(x-y_1)\delta(x-y_2) {\phi}^a{\phi}^b
+\end{equation}
+\subsubsection{II order derivative in momentum space}
+\begin{equation}\label{U2}
+\int  \frac{d^Dp_1}{(2\pi)^D} U_k^{(2)}(\rho, p_1, p_2) = \left[U'_k(\rho)\delta^{ab} + U''_k(\rho){\phi}^a{\phi}^b\right]\delta\left(\sum_{i = 1}^2 p_i \right) 
+\end{equation}
+\subsection{III order derivative}
+\subsubsection{III order derivative in direct space}
+\begin{equation}
+\frac{\delta^3 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)} = 
+\end{equation}
+$$\delta(x - y_1)\Big\{\big[ \delta(x - y_3) \delta(y_1 - y_2)\delta^{ab}\phi^c(y_3) + \delta(x - y_2)\delta(y_1 - y_3)\delta^{ac}\phi^b(y_2)\ +$$
+$$+ \delta(x - y_2)\delta(y_2 - y_3)\delta^{bc}\phi^a(y_1)\big]U_k''(\rho) + \delta(x - y_3)\delta(x-y_2)\phi^a(y_1)\phi^b(y_2)\phi^c(y_3)U_k'''(\rho)\Big\} $$
+\subsubsection{III order derivative in momentum space}
+\begin{equation}\label{U3}
+\int  \frac{d^Dp_1}{(2\pi)^D} U_k^{(3)}(\rho, p_1, p_2, p_3) = \left[\big\{\delta^{ab}\phi^c + \delta^{ac}\phi^b + \delta^{bc}\phi^a\big\}U_k''(\rho) + \phi^a\phi^b\phi^cU_k'''(\rho)\right]\delta\left(\sum_{i=1}^3 p_i\right)
+\end{equation}
+
+\subsection{IV order derivative}
+\subsubsection{IV order derivative in direct space}
+\begin{equation}
+\frac{\delta^4 U_k(\rho)}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3) \phi_d(y_4)} = 
+\end{equation}
+$$ \delta(x - y_1) \Big\{ \delta(y_1 - y_2) \delta(x - y_3) \delta(y_3 - y_4)\delta^{ab}\delta^{cd}U_k''(\rho) \ + $$
+$$+\ \delta(y_1 - y_4) \delta(x - y_2) \delta(y_2 - y_3)\delta^{ad}\delta^{bc}U_k''(\rho) \ + $$
+$$+\ \delta(x - y_2)\delta(y_1 - y_3)\delta(y_2 - y_4)\delta^{ac}\delta^{bd}U_k''(\rho) \ + $$
+$$+ \delta(y_1 - y_2) \delta(x - y_3) \delta(x - y_4)\delta^{ab} \phi^c(y_3)\phi^d(y_4)U_k'''(\rho) \ +$$
+$$+ \delta(x - y_2) \delta(x - y_3) \delta(y_1 - y_4)\delta^{ad}\phi^b(y_2)\phi^c(y_3)U_k'''(\rho) \ + $$
+$$+ \delta(x - y_2) \delta(y_1 - y_3) \delta(x - y_4)\delta^{ac}\phi^b(y_3)\phi^d(y_4)U_k'''(\rho) \ + $$
+$$+\ \delta(x - y_2)\delta(y_2 - y_3)\delta(x - y_4)\delta^{bc}\phi^a(y_1)\phi^d(y_4)U_k'''(\rho) \ + $$
+$$+\ \delta(x - y_2)\delta(x - y_3)\delta(y_2 - y_4)\delta^{bd}\phi^a(y_1)\phi^c(y_3)U_k'''(\rho) \ + $$
+$$+\ \delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\delta^{cd}\phi^a(y_1)\phi^b(y_2)U_k'''(\rho) \ + $$
+$$+\ \delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\phi^a(y_1)\phi^b(y_2)\phi^c(y_3)\phi^d(y_4)U_k''''(\rho)\Big\} $$
+
+\subsubsection{IV order derivative in momentum space}
+\begin{equation}\label{U4}
+\int \frac{d^Dp_1}{(2\pi)^D}  U_k^{(4)}(\rho, p_1, p_2, p_3, p_4)  =  \Bigg\{\Big[ \delta^{ab}\delta^{cd} + \delta^{ad}\delta^{bc} + \delta^{ac}\delta^{bd}\Big]U_k''(\rho) +  
+\end{equation}
+$$\Big[\delta^{ab} \phi^c\phi^d + \delta^{ad}\phi^b\phi^c +\delta^{ac}\phi^b\phi^d +\delta^{bc}\phi^a\phi^d +\delta^{bd}\phi^a\phi^c +\delta^{cd}\phi^a\phi^b\Big]U_k'''(\rho) + $$
+$$+\ \phi^a\phi^b\phi^c\phi^dU_k''''(\rho)\Bigg\} \ \delta\left(\sum_{i=1}^4 p_i\right) $$
+
+\section{Derivatives of $\gamma_k^{Z}$}
+\subsection{I order derivative}
+\subsubsection{I order derivative in direct space}
+\begin{equation}
+ \left.\frac{\delta \gamma_k^{Z}}{\delta \phi_a(y_1)}\right|_{\bar{\phi}} = \left.\frac{Z'_k(\rho)\phi^a}{2}\delta(x - y_1)\partial^\mu \phi_i \partial_\mu \phi^i + Z_k(\rho)\partial^\mu \phi^a\partial_\mu\delta(x-y_1)\right|_{\bar{\phi}} = 0
+\end{equation}
+\subsubsection{I order derivative in momentum space}
+\begin{equation}\label{Z1}
+ \Gamma_Z^{(1)} = 0
+\end{equation}
+\subsection{II order derivative}
+\subsubsection{II order derivative in direct space}
+\begin{equation}
+ \left. \frac{\delta^2 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)}\right|_{\bar{\phi}} =
+ \end{equation}
+$$= \frac{1}{2}Z'_k(\rho)\delta^{ab}\delta(x - y_1)\delta(y_1 - y_2)\partial^\mu \phi_i \partial_\mu \phi^i(x) +  \frac{1}{2}Z''_k(\rho)\delta(x-y_1)\delta(x-y_2){\phi}^a{\phi}^b\partial^\mu \phi_i \partial_\mu \phi^i +$$
+$$+Z'_k(\rho)\phi^a\partial^\mu\phi^b\delta(x-y_1)\partial_\mu\delta(x - y_2) + Z_k(\rho)\delta^{ab}\partial^\mu\delta(y_1 - y_2)\partial_\mu\delta(x - y_1) + Z'_k(\rho)\phi^b \partial_\mu\phi^a\partial^\mu\delta(x - y_1)\delta(x - y_2)=$$
+$$=Z_k(\rho)\delta^{ab}\partial_\mu\delta(x - y_1)\partial^\mu\delta(y_1 - y_2)$$
+\subsubsection{II order derivative in momentum space}
+\begin{equation}\label{Z2}
+ \Gamma_Z^{(2)} = - Z_k(\rho)\delta^{ab}p_1p_2  \delta\left(\sum_{i=1}^2 p_i\right)
+\end{equation}
+
+
+\subsection{III order derivative}
+\subsubsection{III order derivative in direct space}
+\begin{equation}
+\left. \frac{\delta^3 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)}\right|_{\bar{\phi}} = 
+\end{equation}
+$$\partial_\mu\big(\delta(x-y_2)\big)\delta(x-y_1)\delta(y_1 - y_3)\delta^{ac}\partial_\mu\phi^b(x)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_3)\big)\delta(x-y_1)\delta(y_1 - y_2)\delta^{ab}\partial_\mu\phi^c(x)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\delta(x-y_2)\delta(y_3 - y_2)\delta^{bc}\partial_\mu\phi^a(x)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta^{bc}\phi^a(y_1)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta^{ac}\phi^b(y_2)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta^{ab}\phi^c(y_3)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_3)\big)\delta(x-y_1)\delta(x - y_2)\phi^a(y_1)\phi^b(y_2)\partial_\mu\phi^c(y_3)Z_k''(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_2)\big)\delta(x-y_1)\delta(x - y_3)\phi^a(y_1)\partial_\mu\phi^b(y_2)\phi^c(y_3)Z_k''(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\delta(x-y_2)\delta(x - y_3)\partial_\mu\phi^a(y_1)\phi^b(y_2)\phi^c(y_3)Z_k''(\rho)\ + $$
+$$+\ \frac{1}{2}\delta(x-y_1)\delta(x-y_2)\delta(y_2 - y_3)\delta^{bc}\phi^a(y_1)\partial_\mu\phi^i(x)\partial^\mu\phi_i(x)Z_k''(\rho)\ + $$
+$$+\ \frac{1}{2}\delta(x-y_1)\delta(x-y_2)\delta(x - y_3)\delta^{ac}\phi^b(y_2)\partial_\mu\phi^i(x)\partial^\mu\phi_i(x)Z_k''(\rho)\ + $$
+$$+\ \frac{1}{2}\delta(x-y_1)\delta(y_1-y_2)\delta(x - y_3)\delta^{ab}\phi^c(y_3)\partial_\mu\phi^i(x)\partial^\mu\phi_i(x)Z_k''(\rho)\ + $$
+$$+\left.\ \frac{1}{2}\delta(x-y_1)\delta(x-y_2)\delta(x - y_3)\phi^a(y_1)\phi^b(y_2)\phi^c(y_3)\partial_\mu\phi^i(x)\partial^\mu\phi_i(x)Z_k'''(\rho)\ \right|_{\bar{\phi}}= $$
+$$= \ \ \partial_\mu\big(\delta(x-y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta^{bc}\phi^a(y_1)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta^{ac}\phi^b(y_2)Z_k'(\rho)\ + $$
+$$+\ \partial_\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta^{ab}\phi^c(y_3)Z_k'(\rho)\ \ $$
+
+\subsubsection{III order derivative in momentum space}
+\begin{equation}\label{Z3}
+\Gamma_Z^{(3)} = - Z_k'(\rho)\big[p_1p_2\delta^{ab}\phi^c + p_2p_3\delta^{bc}\phi^a + p_3p_1\delta^{ac}\phi^b\big] \delta\left(\sum_{i=1}^3 p_i\right)
+\end{equation}
+
+
+\subsection{IV order derivative}
+\subsubsection{IV order derivative in direct space}
+\begin{equation}
+\left. \frac{\delta^4 \gamma_k^{Z}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)\delta \phi_d(y_4)}\right|_{\bar{\phi}} = 
+\end{equation}
+$$ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta(y_1 - y_4)\delta^{ab}\delta^{cd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta(x - y_4)\delta^{ab}\phi^{c}(y_3)\phi^{d}(y_4) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(y_2 - y_3)\delta(x - y_2)\delta^{ad}\delta^{bc} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_2)\delta(x - y_3)\delta^{ad}\phi^{b}(y_2)\phi^{c}(y_3) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta(y_2 - y_4)\delta^{ac}\delta^{bd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta(x - y_4)\delta^{ac}\phi^{b}(y_2)\phi^{d}(y_4) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\delta(x-y_2)\delta(x - y_4)\delta(y_2 - y_3)\delta^{bc}\partial_\mu\phi^{a}(x)\phi^{d}(y_4) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\delta(x-y_2)\delta(x - y_3)\delta(y_2 - y_4)\delta^{bd}\partial_\mu\phi^{a}(x)\phi^{c}(y_3) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\delta(x-y_2)\delta(x - y_3)\delta(y_3 - y_4)\delta^{cd}\partial_\mu\phi^{a}(x)\phi^{b}(y_2) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\delta(x-y_2)\delta(x - y_3)\delta(x - y_4)\delta^{cd}\partial_\mu\phi^{a}(x)\phi^{b}(y_2)\phi^{c}(y_3)\phi^{d}(y_4)Z_k'''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_4)\big)\delta(x-y_1)\delta(x - y_3)\delta(y_2 - y_1)\delta^{cd}\partial_\mu\phi^{a}(x)\phi^{b}(y_2) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_4)\big)\delta(x-y_1)\delta(x - y_3)\delta(y_2 - y_1)\delta^{ab}\partial_\mu\phi^{d}(x)\phi^{c}(y_3) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_4)\big)\delta(x-y_1)\delta(x - y_2)\delta(y_3 - y_1)\delta^{ac}\partial_\mu\phi^{d}(x)\phi^{b}(y_2) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_4)\big)\delta(x-y_1)\delta(x - y_2)\delta(y_3 - y_2)\delta^{bc}\partial_\mu\phi^{d}(x)\phi^{a}(y_1) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_4)\big)\delta(x-y_1)\delta(x - y_2)\delta(x - y_3)\partial_\mu\phi^{d}(x)\phi^{a}(y_1)\phi^{b}(y_2)\phi^{c}(y_3) Z_k'''(\rho)\ +$$
+$$+ \partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta(y_1 - y_2)\delta^{ab}\delta^{cd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_1)\delta(x - y_2)\delta^{cd}\phi^{a}(y_1)\phi^{b}(y_2) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\delta(x-y_1)\delta(x - y_4)\delta(y_1 - y_2)\delta^{ab}\phi^{d}(y_4)\partial_\mu\phi^{c}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\delta(x-y_1)\delta(y_1 - y_4)\delta(x - y_2)\delta^{ad}\phi^{b}(y_2)\partial_\mu\phi^{c}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\delta(x-y_1)\delta(y_2 - y_4)\delta(x - y_2)\delta^{bd}\phi^{a}(y_1)\partial_\mu\phi^{c}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\delta(x-y_1)\delta(x - y_2)\delta(x - y_4)\partial_\mu\phi^{c}(x)\phi^{a}(y_1)\phi^{b}(y_2)\phi^{d}(y_4) Z_k'''(\rho)\ +$$
+$$ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_1)\delta(y_3 - y_1)\delta^{bd}\delta^{ac} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_3)\delta(x - y_1)\delta^{bd}\phi^{c}(y_3)\phi^{a}(y_1) Z_k''(\rho)\ +$$
+$$+ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta(y_4 - y_1)\delta^{bc}\delta^{ad} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_4)\delta(x - y_1)\delta^{bc}\phi^{d}(y_4)\phi^{a}(y_1) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\delta(x-y_1)\delta(y_1 - y_3)\delta(x - y_4)\delta^{ac}\phi^{d}(y_4)\partial_\mu\phi^{b}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\delta(x-y_1)\delta(x - y_3)\delta(x - y_4)\delta^{ad}\phi^{c}(y_3)\partial_\mu\phi^{b}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\delta(x-y_1)\delta(x - y_3)\delta(y_3 - y_4)\delta^{cd}\phi^{a}(y_1)\partial_\mu\phi^{b}(x) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\delta(x-y_1)\delta(x - y_3)\delta(x - y_4)\partial_\mu\phi^{b}(x)\phi^{a}(y_1)\phi^{c}(y_3)\phi^{d}(y_4) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(y_1 - y_2)\delta(x-y_1)\delta(x - y_3)\delta(y_3 - y_4)\delta^{cd}\delta^{ab}\partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x) Z_k''(\rho)\ +$$
+$$+\frac{1}{2} \delta(y_1 - y_2)\delta(x-y_1)\delta(x - y_3)\delta(x - y_4)\delta^{ab}\phi^c(y_3)\phi^d(y_4)\partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_2)\delta(x-y_1)\delta(y_2 - y_3)\delta(y_1 - y_4)\delta^{bc}\delta^{ad}\partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x) Z_k''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(x - y_3)\delta(y_1 - y_4)\delta^{ad} \partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^b(y_2)\phi^c(y_3) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(y_1 - y_3)\delta(y_1 - y_4)\delta^{ac}\delta^{bd}\partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x) Z_k''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(y_1 - y_3)\delta(x - y_4)\delta^{ac} \partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^b(y_2)\phi^d(y_4) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(y_2 - y_3)\delta(x - y_4)\delta^{bc} \partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^a(y_1)\phi^d(y_4) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(x - y_3)\delta(y_2 - y_4)\delta^{bd} \partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^a(y_1)\phi^c(y_3) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(x - y_3)\delta(y_3 - y_4)\delta^{cd} \partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^a(y_1)\phi^b(y_2) Z_k'''(\rho)\ +$$
+$$+\frac{1}{2} \delta(x - y_1)\delta(x-y_2)\delta(x - y_3)\delta(x - y_4)\partial_\mu\phi^{i}(x)\partial^\mu\phi_i(x)\phi^a(y_1)\phi^b(y_2)\phi^c(y_3)\phi^d(y_4) Z_k''''(\rho)\Big|_{\bar{\phi}} = $$
+
+$$= \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta(y_1 - y_4)\delta^{ab}\delta^{cd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta(x - y_4)\delta^{ab}\phi^{c}(y_3)\phi^{d}(y_4) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(y_2 - y_3)\delta(x - y_2)\delta^{ad}\delta^{bc} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_2)\delta(x - y_3)\delta^{ad}\phi^{b}(y_2)\phi^{c}(y_3) Z_k''(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta(y_2 - y_4)\delta^{ac}\delta^{bd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta(x - y_4)\delta^{ac}\phi^{b}(y_2)\phi^{d}(y_4) Z_k''(\rho)\ +$$
+$$+ \partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta(y_1 - y_2)\delta^{ab}\delta^{cd} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_1)\delta(x - y_2)\delta^{cd}\phi^{a}(y_1)\phi^{b}(y_2) Z_k''(\rho)\ +$$
+$$ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_1)\delta(y_3 - y_1)\delta^{bd}\delta^{ac} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_4)\big)\delta(x - y_3)\delta(x - y_1)\delta^{bd}\phi^{c}(y_3)\phi^{a}(y_1) Z_k''(\rho)\ +$$
+$$+ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta(y_4 - y_1)\delta^{bc}\delta^{ad} Z_k'(\rho)\ +$$
+$$+\ \partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x-y_3)\big)\delta(x - y_4)\delta(x - y_1)\delta^{bc}\phi^{d}(y_4)\phi^{a}(y_1) Z_k''(\rho)$$
+
+\subsubsection{IV order derivative in momentum space}
+\begin{equation}\label{Z4}
+ \Gamma^{(4)}_Z = - \Bigg\{Z'_k(\rho)\Big[\delta^{ab}\delta^{cd}p_1\cdot p_2 + \delta^{ad}\delta^{bc}p_1\cdot p_4 + \delta^{ac}\delta^{bd}p_1\cdot p_3 + \delta^{ab}\delta^{cd}p_3\cdot p_4 + \delta^{bd}\delta^{ac}p_2\cdot p_4 + \delta^{bc}\delta^{ad}p_2\cdot p_3\Big] +
+\end{equation}
+$$ + Z_k''(\rho) \Big[\delta^{ab}\phi^c\phi^dp_1\cdot p_2 + \delta^{ad}\phi^b\phi^c p_1\cdot p_4+ \delta^{ac}\phi^b\phi^dp_1\cdot p_3 + \delta^{cd}\phi^a\phi^b p_3\cdot p_4 + \delta^{bd}\phi^a\phi^cp_2\cdot p_4 + \delta^{bc}\phi^a\phi^dp_2\cdot p_3\Big]\Bigg\}\delta\left(\sum^4_{i = 1}p_i\right)$$
+\section{Derivatives of $\gamma_k^{Y}$}
+\subsection{I order derivative}
+\subsubsection{I order derivative in direct space}
+\begin{equation}
+\left.\left.\frac{\delta\gamma_k^{Y}}{\delta \phi_a(y_1)}\right|_{\bar{\phi}}= \frac{Y'_k(\rho)\phi^a}{4} \delta(x - y_1) \partial^\mu \rho \partial_\mu \rho + \frac{Y_k(\rho)}{2}\partial^\mu\rho\big[\delta(x - y_1)\partial_\mu\phi^a(x) + \phi^a(x)\partial_\mu\delta(x - y_1)\big]\right|_{\bar{\phi}} = 0
+\end{equation} 
+\subsubsection{I order derivative in momentum space}
+\begin{equation}\label{Y1}
+ \Gamma^{(1)}_Y = 0
+\end{equation}
+\subsection{II order derivative}
+\subsubsection{II order derivative in direct space}
+\begin{equation}
+\left.\frac{\delta^2 \gamma_k^{Y}}{\delta \phi_a(y_1)\delta \phi_b(y_2)}\right|_{\bar{\phi}}  = 
+\end{equation}
+$$  \frac{1}{4}\big(Y'_k(\rho)\delta^{ab}\delta(x-y_1)\delta(y_1 - y_2) + 2\rho Y''_k(\rho)\widehat{\phi}^a\widehat{\phi}^b\delta(x - y_1)\delta(x - y_2)\big)\partial^\mu\rho\partial_\mu\rho\ + $$
+$$ + \ \frac{Y'_k(\rho)\phi^b}{2}\delta(x - y_2)\partial^\mu\rho\big(\delta(x - y_1)\partial_\mu\phi^a + \phi^a\partial_\mu\delta(x - y_1)\big)\ + $$
+$$+ \ \frac{Y_k(\rho)}{2}\partial_\mu \rho \big( \delta(x - y_1) \delta^{ab} \partial^\mu \delta(y_1 - y_2) + \delta^{ab} \delta(y_1 - y_2)\partial_\mu\delta(x - y_2) \big) \ +$$
+$$\left. \ + \frac{Y_k(\rho)}{2}\big(\delta(x - y_1) \partial^\mu\phi^a(x) + \phi^a\partial^\mu\delta(x - y_1)\big) \big(\delta(x - y_2) \partial_\mu\phi^b + \phi^b\partial_\mu\delta(x - y_2)\big)\right|_{\phi=cost} =$$
+$$\frac{Y_k(\rho)}{2}\phi^a\phi^b \partial^\mu\delta(x - y_1)\partial_\mu\delta(x - y_2)$$
+
+\subsubsection{II order derivative in momentum space} % SEZIONE COMPLETA%
+\begin{equation}\label{Y2}
+ \Gamma_Y^{(2)} = -\frac{Y_k(\rho)}{2}\phi^a\phi^b p_1p_2 \delta\left(\sum_{i=1}^2 p_i\right)
+\end{equation}
+
+\subsection{III order derivative}   % SEZIONE COMPLETA %
+\subsubsection*{III order derivative in direct space}  % SEZIONE COMPLETA %
+\begin{equation}
+\left.\frac{\delta^3 \gamma_k^{Y}}{\delta \phi_a(y_1)\delta \phi_b(y_2)\delta \phi_c(y_3)}\right|_{\bar{\phi}}  = 
+\end{equation}
+$$\frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta(x - y_2) \delta^{ac}\partial_\mu\phi^b(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_1)\big)\delta(x - y_3)\delta(x - y_2) \delta^{ac}\partial_\mu\phi^b(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta^{ac}\phi^b(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta^{ac}\phi^b(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_2)\big)\delta(x - y_1)\delta(x - y_3) \delta^{ab}\partial_\mu\phi^c(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_1)\big)\delta(x - y_2)\delta(x - y_3) \delta^{ab}\partial_\mu\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x-y_1)\delta(x - y_2)\delta(x - y_3) \partial^\mu\phi^a(x)\phi^b(x)\partial_\mu\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x-y_1)\big)\delta(x - y_2)\delta(x - y_3) \phi^a(x)\phi^b(y_2)\partial_\mu\phi^c(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta^{ab}\phi^c(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta^{ab}\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\delta(x - y_2)\delta(x - y_1)\partial_\mu \phi^a(x)\phi^b(y_2) \phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2) \phi^a(x)\phi^b(y_2) \phi^c(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\delta(x - y_2)\partial^\mu\big(\delta(x-y_3)\big)\delta(x - y_1)\delta^{bc}\partial_\mu\phi^a(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta^{bc}\phi^a(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\delta(x - y_1)\partial^\mu\big(\delta(x-y_2)\big)\delta(x - y_3)\delta^{bc}\partial_\mu\phi^a(x) \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x-y_2)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta^{bc}\phi^a(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x-y_1)\delta(x - y_2)\delta(x - y_3) \partial_\mu\phi^a(x)\partial^\mu\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x-y_1)\big)\delta(x - y_2)\delta(x - y_3) \phi^a(x)\partial^\mu\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x-y_2)\big)\delta(x - y_1)\delta(x - y_3) \partial^\mu\phi^a(x)\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x-y_1)\big)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3) \phi^a(x)\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3) \delta^{ab}\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3) \delta^{ab}\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1) \delta^{ac}\phi^b(y_2) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3) \delta^{ac}\phi^b(y_2) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\delta(x - y_1)\delta(x - y_3) \delta^{bc}\partial^\mu\phi^a(x) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\delta(x - y_1)\delta(x - y_3) \partial^\mu\phi^a(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\partial^\mu\big(\delta(x - y_1)\big)\delta(y_2 - y_3) \delta^{bc}\phi^a(x) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3) \phi^a(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_2) \delta(x - y_1)\delta(y_2 - y_3) \delta^{ab}\partial^\mu\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(y_1 - y_2) \delta^{ab}\phi^c(x) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\delta(x - y_3)\delta(x - y_2) \phi^a(y_1)\phi^b(y_2)\partial^\mu\phi^c(x) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_2) \phi^a(y_1)\phi^b(y_2)\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x-y_1)\delta(x - y_3)\partial^\mu\big(\delta(x - y_2)\big) \phi^a(y_1)\phi^b(x)\partial_\mu\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x-y_1)\delta(x - y_2)\partial^\mu\big(\delta(x - y_3)\big) \phi^a(y_1)\partial_\mu\phi^b(x)\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x-y_1)\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_3)\big) \phi^a(y_1)\phi^b(x)\phi^c(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_2) \delta^{bc}\phi^a(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3) \delta^{bc}\phi^a(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(x - y_3) \delta^{ac}\partial^\mu\phi^b(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(y_1 - y_3) \delta^{ac}\phi^b(x) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(x - y_3) \phi^a(y_1) \partial^\mu\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x-y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3) \phi^a(y_1)\phi^b(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial_\mu\rho\partial^\mu\rho\delta(x-y_1)\delta(y_1 - y_2)\delta(x - y_3) \delta^{ab}\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial_\mu\rho\partial^\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(y_1 - y_3) \delta^{ac}\phi^b(y_2) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial_\mu\rho\partial^\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(y_2 - y_3) \delta^{bc}\phi^a(y_1) \ +$$
+$$+\left. \frac{Y'''_k(\rho)}{4}\partial_\mu\rho\partial^\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(x - y_3) \phi^a(y_1)\phi^b(y_2)\phi^c(y_3)\right|_{\bar{\phi}} =$$
+
+
+
+$$ \frac{Y_k(\rho)}{2}\Big[\partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta^{ac}\phi^b(x) \ +$$
+$$+\ \partial^\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta^{ac}\phi^b(x) \ +$$
+$$+\ \partial^\mu\big(\delta(x-y_1)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta^{ab}\phi^c(x) \ +$$
+$$+\ \partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta^{ab}\phi^c(x) \ +$$
+$$+\ \partial^\mu\big(\delta(x-y_2)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta^{bc}\phi^a(x) \ +$$
+$$+\ \partial^\mu\big(\delta(x-y_2)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta^{bc}\phi^a(x)\Big] \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\Big[\partial_\mu\big(\delta(x-y_1)\big)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3) \phi^a(x)\phi^b(x)\phi^c(y_3) \ +$$
+$$\ \ \ +\ \partial^\mu\big(\delta(x-y_3)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2) \phi^a(x)\phi^b(y_2) \phi^c(x) \ +$$
+$$\ \ \ +\ \partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_3)\big) \delta(x-y_1)\phi^a(y_1)\phi^b(x)\phi^c(x)\Big]$$
+
+
+
+\subsubsection{III order derivative in momentum space} % SEZIONE COMPLETA %
+\begin{equation}\label{Y3}
+ {\Gamma_Y}^{(3)}(p_1, p_2, p_3) =  
+\end{equation}
+$$ - \left\{Y_k(\rho)\Big[p_1p_2\phi^c\delta^{ab} + p_2 p_3 \phi^a \delta^{bc} + p_3p_1\phi^b\delta^{ca}\Big] + \frac{Y'_k(\rho)}{2}\Big[p_1p_2 + p_2p_3 + p_3p_1\Big]\phi^a\phi^b\phi^c\right\}\delta\left(\sum_{i = 1}^3 p_i \right)$$
+
+
+
+\subsection{IV order derivative}
+
+\subsubsection{IV order derivative in direct space}
+
+\begin{equation}
+ \left.\frac{\delta^4 \gamma_Y}{\delta\phi^a(y_1)\delta\phi^b(y_2)\delta\phi^c(y_3)\delta\phi^(y_4)}\right|_{\bar{\phi}} = 
+\end{equation}
+$$ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3) \delta^{ab}\delta^{cd}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_4)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_2)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_4)\delta(x - y_2)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_4)\delta(x - y_2)\partial_\mu\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_1) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_4) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\delta(x - y_3) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\delta(x - y_2)\partial_\mu\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_4)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_4)\delta(x - y_2)\partial_\mu\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\delta(x - y_2)\partial_\mu\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_1)\delta(x - y_4)\partial_\mu\phi^d(x)\phi^c(y_3)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\phi^c(y_3)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_2)\delta(x - y_4)\partial_\mu\phi^d(x)\phi^c(y_3)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^c(y_3)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_2)\delta(x - y_4)\partial_\mu\phi^d(x)\phi^b(y_2)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\phi^b(y_2)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^b(y_2)\partial^\mu\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^b(y_2)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(y_2 - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^a(x)\partial^\mu\phi^d(x)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(y_2 - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^a(x)\phi^d(x)\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_4)\delta(y_2 - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^a(x)\partial^\mu\phi^d(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_1)\delta(x - y_2)\partial_\mu\phi^a(x)\phi^d(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(y_2 - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\partial^\mu\phi^d(x)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(y_2 - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^d(x)\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_4)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\partial^\mu\phi^d(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^d(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_3)\delta(x - y_4)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta^{ab}\partial^\mu\phi^c(x)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_3)\delta(x - y_4)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta^{ab}\partial^\mu\phi^c(x)\phi^d(y_4) \ +$$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x- y_4)\delta^{ab}\phi^c(x)\phi^d(y_4)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ab}\partial^\mu\phi^c(x)\phi^d(y_4)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ab}\phi^c(x)\phi^d(y_4)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta(x- y_1)\delta^{ad}\partial^\mu\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta(x- y_1)\delta^{ad}\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ad}\partial^\mu\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ad}\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\delta(x - y_1)\delta(x - y_2)\delta(y_2- y_4)\delta^{bd}\partial^\mu\phi^c(x)\partial_\mu\phi^a(x)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_2)\delta(y_2- y_4)\delta^{bd}\phi^c(x)\partial_\mu\phi^a(x)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\delta(x - y_1)\delta(x - y_2)\delta(x- y_4)\delta^{bd}\phi^b(y_2)\phi^d(y_4)\partial^\mu\phi^c(x)\partial_\mu\phi^a(x)Y''_k(\rho) + $$
+$$+ \frac{1}{2}\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_2)\delta(x- y_4)\phi^b(y_2)\phi^d(y_4)\phi^c(x)\partial_\mu\phi^a(x)Y''_k(\rho) + $$
+$$+ \frac{1}{2}\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(y_2 - y_4)\delta^{bd}\partial^\mu\phi^c(x)\phi^a(x)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_2)\delta(x- y_4)\phi^b(y_2)\phi^d(y_4)\phi^c(x)\partial_\mu\phi^a(x)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(y_2- y_4)\delta^{bd}\phi^c(x)\phi^a(x)Y'_k(\rho) + $$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_3)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_4)\phi^a(x)\partial_\mu\phi^c(x)\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_4)\phi^a(x)\phi^c(x)\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_4)\partial_\mu\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_4)\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4)\partial_\mu\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_1)\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_2)\partial_\mu\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_2)\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_1)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4)\partial_\mu\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\partial_\mu\phi^a(x)\partial^\mu\phi^b(x)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\phi^a(x)\partial^\mu\phi^b(x)\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta(x - y_4)\partial_\mu\phi^a(x)\partial^\mu\phi^b(x)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\partial^\mu\phi^b(x)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(y_3 - y_4)\phi^b(x)\partial^\mu\phi^a(x)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(y_3 - y_4)\phi^b(x)\phi^a(x)\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^a(x)\phi^b(x)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^b(x)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(y_3 - y_4)\partial^\mu\rho \delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\partial^\mu\rho \delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{ab}\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{ab}\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\delta(x - y_2)\delta(y_2 - y_3)\partial^\mu\rho \delta^{ad}\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_4)\delta(x - y_2)\delta(y_2 - y_3)\partial^\mu\rho \delta^{ad}\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta(x - y_3)\delta(x - y_1)\partial^\mu\rho \delta^{ad}\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{ad}\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\delta(x - y_2)\delta(y_2 - y_4)\partial^\mu\rho \delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_2)\delta(y_2 - y_4)\partial^\mu\rho \delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_1)\delta(x - y_4)\partial^\mu\rho \delta^{ac}\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{ac}\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_1)\delta(x - y_2)\delta(y_2 - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{bc}\partial_\mu\phi^a(x)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(y_2 - y_3)\delta(x - y_4)\partial^\mu\rho \delta^{bc}\phi^a(x)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta(y_2 - y_4)\partial^\mu\rho \delta^{bd}\partial_\mu\phi^a(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(y_2 - y_4)\partial^\mu\rho \delta^{bd}\phi^a(x)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\partial^\mu\rho \delta^{cd}\partial_\mu\phi^a(x)\phi^b(y_2) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_3)\delta(y_3 - y_4)\partial^\mu\rho \delta^{cd}\phi^a(x)\phi^b(y_2) \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial_\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^a(x)\phi^b(y_2)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial_\mu\rho\delta(x - y_2)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^b(y_2)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^d(x)\phi^c(y_3)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^d(x)\phi^b(y_2)\delta^{ac} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial_\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^d(x)\phi^a(y_1)\phi_b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_3)\partial^\mu\big(\delta(x - y_4)\big)\phi^d(x)\delta^{ab}\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\partial^\mu\big(\delta(x - y_4)\big)\phi^d(x)\delta^{ac}\phi^b(y_2) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\partial^\mu\phi^c(x)\partial_\mu\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(x - y_4)\phi^a(y_1)\phi^b(y_2)\partial^\mu\phi^c(x)\partial_\mu\phi^d(x)\ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\partial^\mu\phi^c(x)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\phi^a(y_1)\phi^b(y_2)\partial^\mu\phi^c(x)\phi^d(x)\ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^c(x)\partial_\mu\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^c(x)\partial_\mu\phi^d(x)\phi^a(y_1)\phi^b(y_2) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_4)\big)\phi^c(x)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_4)\big)\phi^a(y_1)\phi^b(y_2)\phi^c(x)\phi^d(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\phi^a(y_1)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_4)\partial_\mu\big(\delta(x - y_3)\big)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_4)\partial_\mu\big(\delta(x - y_3)\big)\phi^a(y_1)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_4)\delta(x - y_3)\partial_\mu\phi^c(x)\phi^d(y_4)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_2)\delta(x - y_1)\delta(x - y_4)\partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^d(y_4)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(y_1 - y_4) \delta(x - y_3)\partial_\mu\phi^c(x)\phi^b(y_2)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(y_1 - y_4) \partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^b(y_2)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(y_2 - y_4) \delta(x - y_3)\partial_\mu\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(y_2 - y_4) \partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_4) \partial_\mu\big(\delta(x - y_3)\big)\phi^a(x)\phi^c(x)\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\delta(x - y_4) \delta(x - y_3)\phi^a(x)\partial_\mu\phi^c(x)\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \delta(x - y_3)\partial_\mu\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\partial_\mu\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big) \delta(x - y_2)\partial_\mu\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_3)\big)\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\partial_\mu\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_3)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_2)\big)\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\partial_\mu\phi^d(x)\partial_\mu\phi^b(x)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\partial_\mu\phi^d(x)\partial_\mu\phi^b(x)\phi^a(y_1)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\partial_\mu\phi^d(x)\phi^b(x)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\partial_\mu\phi^d(x)\phi^b(x)\phi^a(y_1)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\phi^b(x)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\phi^b(x)\phi^d(x)\phi^a(y_1)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\phi^b(x)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\phi^b(x)\phi^d(x)\phi^a(y_1)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\partial_\mu\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(y_1 - y_4)\partial_\mu\phi^b(x)\partial_\mu\phi^c(x)\delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(y_1 - y_4)\phi^b(x)\partial_\mu\phi^c(x)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\delta(x - y_3)\delta(y_1 - y_4)\partial_\mu\phi^b(x)\partial_\mu\phi^c(x) \phi^a(y_1) \phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3)\delta(y_1 - y_4)\phi^b(x)\partial_\mu\phi^c(x) \phi^a(y_1) \phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(y_1 - y_4)\partial_\mu\phi^b(x)\phi^c(y_3) \delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(y_1 - y_4)\phi^b(x)\phi^c(y_3) \delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(y_1 - y_4)\partial_\mu\phi^b(x)\phi^c(y_3) \phi^a(y_1) \phi^d(y_4)  \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^b(x)\phi^c(y_3) \phi^a(y_1) \phi^d(y_4)  \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \delta(y_1 - y_3)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(y_1 - y_3)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \delta(x - y_3)\phi^a(y_1)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\phi^a(y_1)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big) \delta(x - y_2)\delta^{ad}\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big) \delta(x - y_2)\phi^a(y_1)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\rho\delta(y_1 - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\delta^{ad}\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\phi^a(y_1)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2) \delta(x - y_3)\partial_\mu\phi^b(x)\phi^d(y_4)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2) \delta(x - y_3)\partial_\mu\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\rho\delta(y_3 - y_4)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big) \delta(x - y_3)\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{2}\partial^\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\partial_\mu\phi^b(x)\phi^a(y_1)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(y_3 - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta^{ab}\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(y_2 - y_3)\delta^{ad}\delta^{bc} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(y_1 - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\delta^{ad}\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(y_2 - y_4)\delta(x - y_1)\delta(x - y_2)\delta(y_1 - y_3)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(y_1 - y_3)\phi^b(y_2)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(x - y_4)\delta(x - y_1)\delta(x - y_2)\delta(y_2 - y_3)\phi^a(y_1)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(y_2 - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\phi^a(y_1)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'''_k(\rho)}{4}\partial^\mu\rho\partial_\mu\rho\delta(y_3 - y_4)\delta(x - y_1)\delta(x - y_2)\delta(x - y_3)\phi^a(y_1)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\left. \frac{Y''''_k(\rho)}{4}\partial_\mu\rho\partial^\mu\rho\delta(x-y_1)\delta(x - y_2)\delta(x - y_3)\delta(x-y_4) \phi^a(y_1)\phi^b(y_2)\phi^c(y_3)\phi^d(y_4)\right|_{\bar{\phi}} =$$
+$$ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_3) \delta^{ab}\delta^{cd}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x - y_4)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_2)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_4)\delta(x - y_2)\delta^{ab}\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^b(y_2)\delta^{cd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_1) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\delta(x - y_4) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\delta(x - y_3) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4) \delta^{ad}\delta^{bc}\ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_4)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\phi^b(x)\phi^c(y_3)\delta^{ad} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_2)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\delta^{ac}\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_3)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_4)\phi^b(x)\phi^d(y_4)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\phi^c(y_3)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^c(y_3)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_2)\phi^b(y_2)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^b(y_2)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^d(x)\phi^b(y_2)\phi^c(y_3) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial^\mu\big(\delta(x - y_4)\big)\delta(y_2 - y_3)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\phi^a(x)\phi^d(x)\delta^{bc} \ +$$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\delta(x- y_4)\delta^{ab}\phi^c(x)\phi^d(y_4)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ab}\phi^c(x)\phi^d(y_4)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ad}\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x- y_4)\delta^{ad}\phi^c(x)\phi^b(y_2)Y'_k(\rho) + $$
+$$+ \frac{1}{2}\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(y_2- y_4)\delta^{bd}\phi^c(x)\phi^a(x)Y'_k(\rho) + $$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_4)\phi^a(x)\phi^c(x)\phi^b(y_2)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_3)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_2)\delta(x - y_4)\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^d(y_4)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\partial^\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\delta(x - y_2)\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_1)\big)\partial^\mu\big(\delta(x - y_2)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^c(y_3)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(y_3 - y_4)\phi^b(x)\phi^a(x)\delta^{cd} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\partial^\mu\big(\delta(x - y_1)\big)\delta(x - y_3)\delta(x - y_4)\phi^a(x)\phi^b(x)\phi^c(y_3)\phi^d(y_4) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_4)\big)\phi^c(x)\phi^d(x)\delta^{ab} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial^\mu\big(\delta(x - y_3)\big)\partial_\mu\big(\delta(x - y_4)\big)\phi^a(y_1)\phi^b(y_2)\phi^c(x)\phi^d(x) \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_3)\big)\phi^c(x)\phi^a(y_1)\delta^{bd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_2)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_3)\big)\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\delta(x - y_3)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big) \partial_\mu\big(\delta(x - y_2)\big)\phi^d(x)\phi^a(y_1)\delta^{bc} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_4)\big)\delta(x - y_3)\phi^b(x)\phi^d(x)\delta^{ac} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^b(x)\phi^a(y_1)\delta^{cd} \ +$$
+$$+\ \frac{Y'_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(y_1 - y_4)\phi^b(x)\phi^c(y_3) \delta^{ad} \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\partial_\mu\big(\delta(x - y_2)\big)\delta(x - y_1)\partial_\mu\big(\delta(x - y_3)\big)\delta(x - y_4)\phi^b(x)\phi^c(y_3) \phi^a(y_1) \phi^d(y_4)  \ +$$
+$$+\ \frac{Y''_k(\rho)}{2}\delta(x - y_3)\delta(x - y_1)\partial^\mu\big(\delta(x - y_2)\big)\partial_\mu\big(\delta(x - y_4)\big)\phi^c(y_3)\phi^d(x)\phi^a(y_1)\phi^b(x)$$
+
+
+
+
+
+\subsubsection{IV order derivative in momentum space}
+\begin{equation}\label{Y4}
+ \Gamma^{(4)}_k (p_1, p_2, p_3, p_4) = 
+\end{equation}
+$$= -\Big\{\frac{Y_k(\rho)}{2}\Big[p_2\cdot p_4 (\delta^{ab}\delta^{cd}+\delta^{ad}\delta^{bc}) + p_2\cdot p_3(\delta^{ab}\delta^{cd}+ \delta^{ac}\delta^{bd}) +$$
+$$+p_1\cdot p_3(\delta^{ab}\delta^{cd}+ \delta^{ad}\delta^{bc}) + p_4\cdot p_1(\delta^{ab}\delta^{cd} + \delta^{ac}\delta^{bd}) +$$
+$$+p_2\cdot p_1(\delta^{ad}\delta^{bc} + \delta^{ac}\delta^{bd}) + p_3\cdot p_4(\delta^{ad}\delta^{bc} + \delta^{ac}\delta^{bd})\Big]+$$
+$$+ \frac{Y'_k(\rho)}{2}\Big[p_1 \cdot p_4 (\phi^a\phi^b\delta^{cd} + \phi^a\phi^c\delta^{bd} + \phi^b\phi^d\delta^{ac} + \phi^c\phi^d\delta^{ab} + \phi^a\phi^d\delta^{bc}) + $$
+$$+ p_3 \cdot p_1 (\phi^c\phi^d\delta^{ab} + \phi^a\phi^b\delta^{cd} + \phi^c\phi^a\delta^{bd} + \phi^c\phi^b\delta^{ad} + \phi^a\phi^d\delta^{bc}) + $$
+$$+ p_1 \cdot p_2 (\phi^a\phi^d\delta^{bc} + \phi^a\phi^c\delta^{bd} + \phi^b\phi^a\delta^{cd} + \phi^b\phi^d\delta^{ac} + \phi^b\phi^c\delta^{ad}) + $$
+$$+ p_2 \cdot p_4 (\phi^c\phi^d\delta^{ab} + \phi^b\phi^c\delta^{ad} +  \phi^d\phi^a\delta^{bc} + \phi^b\phi^d\delta^{ac} +\phi^b\phi^a\delta^{cd}) + $$
+$$+ p_3 \cdot p_4 (\phi^c\phi^d\delta^{ab} + \phi^c\phi^a\delta^{bd} + \phi^d\phi^a\delta^{bc} + \phi^b\phi^d\delta^{ac} + \phi^c\phi^d\delta^{ab}) + $$
+$$+ p_2 \cdot p_3 (\phi^c\phi^d\delta^{ab} + \phi^b\phi^d\delta^{ac} + \phi^b\phi^a\delta^{cd} + \phi^b\phi^c\delta^{ad} + \phi^a\phi^c\delta^{db})\Big]+$$
+$$+ \frac{Y''_k(\rho)}{2}\Big[p_1\cdot p_2 + p_2\cdot p_3 + p_3\cdot p_4 + p_4\cdot p_1 + p_1\cdot p_3 + p_4\cdot p_2 \Big]\phi^a\phi^b\phi^c\phi^d\Bigg\} \delta\left(\sum_{i=1}^4 p_i\right)$$

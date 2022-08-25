@@ -1,0 +1,232 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage{verbatim}
+\usepackage{tesiscienzeunibo}
+\usepackage{booktabs}
+\usepackage[nottoc]{tocbibind}
+\usepackage{textcomp}
+\usepackage{indentfirst}
+\graphicspath{{./figure/}} 
+\hypersetup{
+  bookmarksopen, 
+  bookmarksopenlevel=2, 
+  pdftitle={},
+  pdfauthor={Alessandro Gianfelici},
+  pdfsubject={Tesi di Laurea Maistrale di Alessandro Gianfelici},
+  pdfkeywords={}} % Queste informazioni non vengono stampate, ma sono conservate nel documento pdf. Sono consultabili col menu "File>Document Properites>Description". Vengono buone a scopi archivistici.
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{latexsym}
+\usepackage{makeidx}
+\usepackage{mathrsfs}
+\usepackage[utf8x]{inputenc}
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\Def}{:=}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\N}{N}
+\DeclareMathOperator{\Int}{Int}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\vs}[1]{\vspace{#1 mm}}
+\newcommand{\hs}[1]{\hspace{#1 mm}}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\c}{\gamma}
+\newcommand{\G}{\Gamma}
+\renewcommand{\d}{\delta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\s}{\sigma}
+\renewcommand{\t}{\theta}
+\newcommand{\vp}{\varphi}
+\newcommand{\la}{\lambda}
+\newcommand{\pa}{\partial}
+\newcommand{\tb}{{\bar \theta}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\p}[1]{(\ref{#1})}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\bR}{\bar R}
+\newcommand{\hR}{\hat R}
+\newcommand{\bnabla}{\bar\nabla}
+\newcommand{\hnabla}{\hat\nabla}
+\newcommand{\bg}{\bar g}
+\newcommand{\hg}{\hat g}
+\newcommand{\tilh}{\tilde h}
+\newcommand{\tth}{{h^{TT}}}
+\newcommand{\bt}{\bar\tau}
+\newcommand{\bphi}{\bar\phi}
+%\newcommand{\det}{\mathrm{det}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\Det}{\mathrm{Det}}
+\newcommand{\Lie}{{\cal L}}
+\newcommand{\brho}{\bar \rho}
+\DeclareMathOperator{\STr}{STr}
+
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{proposizione}[teorema]{Proposizione}
+\newtheorem{lemma}[teorema]{Lemma}
+\newtheorem{corollario}[teorema]{Corollario}
+
+\theoremstyle{definition}
+\newtheorem{definizione}[teorema]{Definizione}
+\newtheorem{esempio}[teorema]{Esempio}
+
+\theoremstyle{remark}
+\newtheorem{osservazione}[teorema]{Osservazione}
+
+\makeindex
+
+
+\usepackage{newlfont}
+\usepackage{color}
+\textwidth=450pt\oddsidemargin=0pt
+
+
+\begin{document}
+\begin{titlepage}
+%
+%
+% UNA VOLTA FATTE LE DOVUTE MODIFICHE SOSTITUIRE "RED" CON "BLACK" NEI COMANDI \textcolor
+%
+%
+\begin{center}
+{{\Large{\textsc{Alma Mater Studiorum $\cdot$ Universit\`a di Bologna}}}} 
+\rule[0.1cm]{15.8cm}{0.1mm}
+\rule[0.5cm]{15.8cm}{0.6mm}
+\\\vspace{3mm}
+%
+% PER LA LAUREA TRIENNALE TOGLIERE "MAGISTRALE"
+%
+{\small{\bf Scuola di Scienze \\ Corso di Laurea Magistrale in Fisica}}
+
+\end{center}
+
+\vspace{23mm}
+
+\begin{center}{
+%
+% INSERIRE IL TITOLO DELLA TESI
+%
+{\LARGE{\bf A linear O(N) model: a functional renormalization group approach for flat and curved space}}\\
+}\end{center}
+
+\vspace{50mm} \par \noindent
+
+\begin{minipage}[t]{0.47\textwidth}
+%
+% INSERIRE IL NOME DEL RELATORE CON IL RELATIVO TITOLO DI DOTTORE O PROFESSORE
+%
+{\large{\bf Relatore: \vspace{2mm}\\{
+Prof. Fiorenzo Bastianelli}\\\\
+%
+% INSERIRE IL NOME DEL CORRELATORE CON IL RELATIVO TITOLO DI DOTTORE O PROFESSORE
+%
+% SE NON AVETE UN CORRELATORE CANCELLATE LE PROSSIME 3 RIGHE
+%
+{
+\bf Correlatore: 
+\vspace{2mm}\\
+Dr. Gian Paolo Vacca\\\\}}}
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}[t]{0.47\textwidth}\raggedleft {
+{\large{\bf Presentata da:
+\vspace{2mm}\\
+%
+% INSERIRE IL NOME DEL CANDIDATO
+%
+Alessandro Gianfelici}}}
+\end{minipage}
+
+\vspace{17mm}
+
+\begin{center}
+%
+% SCEGLIERE LA SESSIONE DI LAUREA
+%
+{\large{\bf Sessione  {III}
+\vspace{2mm}\\
+%
+% INSERIRE L'ANNO ACCADEMICO
+%
+Anno Accademico {2013/2014}}}
+\end{center}
+
+\end{titlepage}
+
+
+
+
+
+
+
+\input {abstractITA}
+\input {abstractENG}
+
+\renewcommand{\theequation}{\arabic{equation}}%consigliato per migliorare i numeri di equazione nell'introduzione
+\renewcommand{\thesection}{\arabic{section}}%consigliato per migliorare i numeri di equazione nell'introduzione
+\input {introduzione}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}%si torna alle formule numerate come da default
+\renewcommand{\thesection}{\thechapter.\arabic{section}}%si torna alle sezioni numerate come da default
+\tableofcontents
+
+
+
+
+
+\input {capitolo1} 
+\input {capitolo2}
+\input {capitolo3}
+\input {capitolo4}
+\input {capitolo5}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FINO A QUI  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\renewcommand{\theequation}{\arabic{equation}}%consigliato per migliorare i numeri di equazione nell'introduzione
+\renewcommand{\thesection}{\arabic{section}}%consigliato per migliorare i numeri di equazione nell'introduzione
+\input {conclusioni}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}%si torna alle formule numerate come da default
+\renewcommand{\thesection}{\thechapter.\arabic{section}}%si torna alle sezioni numerate come da default
+\appendix
+
+
+\index{appendix}
+
+\input{appendiceA}
+\input{appendiceB}
+\input{appendiceC}
+\input{appendiceD}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\backmatter
+\listoffigures
+\listoftables
+\input{bibliografia}
+ 
+\end{document}
